@@ -46,6 +46,7 @@ WORKDIR /srv/nostrtool/python-nostr
 RUN git checkout dev
 
 WORKDIR /srv/nostrtool
+RUN echo "Werkzeug==2.2.2" >> requirements.txt 
 RUN /srv/.env/bin/pip install -r requirements.txt --no-cache-dir
 
 WORKDIR /srv/nostrtool/src
